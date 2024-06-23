@@ -1,0 +1,66 @@
+/* registration.component.css */
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 150px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registration-container h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.registration-container form div {
+  margin-bottom: 10px;
+}
+
+.registration-container form label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.registration-container form input[type="text"],
+.registration-container form input[type="email"],
+.registration-container form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.registration-container form button {
+  margin-top: 2px;
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.registration-container form button:hover {
+  background-color: #0056b3;
+}
+
+.registration-container p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.registration-container a {
+  color: #007bff;
+  font-size: 18px;
+}
+
+.success-message {
+  color: green;
+}

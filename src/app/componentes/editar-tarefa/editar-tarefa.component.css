@@ -1,0 +1,30 @@
+.form-edicao {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-right: -200px;
+    transform: translate(-50%, -50%); 
+    background-color: #040D12; 
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    width: 350px; 
+    border-radius: 8px; 
+    border: 1px solid white;
+}
+
+.descricao-edicao {
+    margin-bottom: 15px;
+}
+
+.botao-salvar-edicao {
+    background-color: #040D12;
+    border-radius: 5px; 
+    border: 1px solid white;
+    color: white;
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}

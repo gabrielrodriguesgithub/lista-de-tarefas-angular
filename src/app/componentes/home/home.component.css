@@ -1,0 +1,170 @@
+
+
+.home-container {
+  margin: 35px auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}  
+
+
+.adicionar-tarefa-home {
+  display: flex;
+  flex-direction: column ;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+.titulo-adicionar-tarefa {
+  font-size: 50px;
+  text-align: center;
+  padding: 35px 0 50px 0;
+  
+}
+
+.formulario-adicionar-tarefa {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.itens-tarefa{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.itens-tarefa-nome {
+  font-size: 35px;
+  text-align: center;
+}
+
+.itens-tarefa-input {
+  background-color: #040D12;
+  border: 2px solid white;
+  border-radius: 7px;
+  padding: 12px;
+  width: 320px;
+  font-size: 35px;
+  color: white;
+}
+
+.botao {
+  margin-top: 50px;
+  padding: 12px;
+  background-color: #040D12;
+  border: 2px solid white;
+  border-radius: 7px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  width: 351px;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.botao:hover {
+  background-color: #304F4F;
+}
+
+.botao-logout {
+  margin: 15px;
+  padding: 5px;
+  width: 200px;
+  font-size: 20px;
+}
+
+
+
+
+.tarefas-list {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.titulo-tarefas {
+  text-align: center;
+  font-size: 50px;
+  cursor: pointer;
+  margin-bottom: 500px;
+}
+  
+.tarefa {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 100px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tarefa-concluida {
+  background-color: #183D3D;
+}
+
+.tarefa-nao-concluida {
+  background-color: #040D12;
+}
+
+.titulo-tarefa-adicionada{
+  font-size: 35px;
+}
+
+.prazo-tarefa-adicionado, .concluido-tarefa-adicionada, .descricao-tarefa-adicionada {
+  font-size: 25px;
+}
+
+.botoes-tarefa {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: red;
+}
+
+.titulo-home {
+}
+
+.hide {
+  display: none;
+}
+
+
+.botao-funcao {
+  background-color: #040D12;
+  border-radius: 5px; 
+  border: 1px solid white;
+  color: white;
+  width: 100px;
+  margin: 0 auto;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+
+.div-edicao {
+  display: flex;
+}

@@ -1,0 +1,13 @@
+<form class="form-edicao" (ngSubmit)="editarTarefa()" #editarForm="ngForm">
+    <label for="titulo">Título</label>
+    <input type="text" id="titulo" name="titulo" [(ngModel)]="tarefaEditadaLocal.titulo" required>
+  
+    <label for="prazo">Prazo</label>
+    <input type="date" id="prazo" name="prazo" [(ngModel)]="tarefaEditadaLocal.prazo" required>
+  
+    <label for="descricao">Descrição</label>
+    <textarea class="descricao-edicao" id="descricao" name="descricao" [(ngModel)]="tarefaEditadaLocal.descricao" required></textarea>
+  
+    <button class="botao-salvar-edicao" type="submit">Salvar</button>
+  </form>
+  

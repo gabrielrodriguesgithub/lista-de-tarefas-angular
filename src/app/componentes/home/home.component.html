@@ -1,0 +1,71 @@
+<div class="body">
+<div class="home-container">
+  <div class="menu">
+    <h1 class="titulo-home">Lista de Tarefas</h1>
+    
+    <button (click)="logout()" class="botao botao-logout">Logout</button>
+  </div>
+
+  <div class="adicionar-tarefa-home">
+    <h2 class="titulo-adicionar-tarefa">Adicionar Tarefa</h2>
+
+      <form [formGroup]="tarefaForm" (ngSubmit)="onSubmit()">
+        <div class="formulario-adicionar-tarefa">
+
+        <div class="itens-tarefa">
+          <label for="titulo" class="itens-tarefa-nome">Título </label>
+          <input type="text" id="titulo" formControlName="titulo"  class="itens-tarefa-input" required>
+        </div>
+        <div class="itens-tarefa"> 
+          <label for="prazo" class="itens-tarefa-nome">Prazo </label>
+          <input type="date" id="prazo" formControlName="prazo" class="itens-tarefa-input" required>
+        </div>
+        <div class="itens-tarefa">
+          <label for="descricao" class="itens-tarefa-nome" >Descrição </label>
+          <input id="descricao" formControlName="descricao" class="itens-tarefa-input" required>
+        </div>
+        <button type="submit" class="botao">Adicionar</button>
+      </div>
+      </form>
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+  </div>
+
+
+  <h2 class="titulo-tarefas" (click)="toggleTarefas()">Tarefas</h2>
+
+    <div class="tarefas-list hide">
+    
+      <div class="tarefa"  *ngFor="let tarefa of tarefas; let i = index" [ngClass]="{'tarefa-concluida': tarefa.concluido, 'tarefa-nao-concluida': !tarefa.concluido}">
+        <div class="tarefa-content">
+          <h2 class="titulo-tarefa-adicionada">{{ tarefa.titulo }}</h2>
+          <p class="prazo-tarefa-adicionado"><strong>Prazo: </strong> {{ tarefa.prazo }}</p>
+          <p class="concluido-tarefa-adicionada">
+            <strong>Concluído:</strong> 
+            <input type="checkbox" [(ngModel)]="tarefa.concluido" class="input-concluido" (change)="onConcluirTarefa(tarefa)">
+          </p>
+          <p class="descricao-tarefa-adicionada"><strong>Descrição:</strong> {{ tarefa.descricao }}</p>
+        </div>
+
+        <div class="div-edicao">
+
+          <div class="form-edicao" *ngIf="mostrarFormularioEdicao[i]">
+            <app-editar-tarefa [tarefa]="tarefa" [id]="tarefa.id" (tarefaEditada)="atualizarTarefa($event)"></app-editar-tarefa>
+          </div>
+
+          <div class="botoes-tarefa">
+            <button (click)="deletarTarefa(tarefa.id)" class="botao-funcao ">Deletar</button>
+            <button (click)="editarTarefa(tarefa, i)" class="botao-funcao ">Editar</button>
+          </div>
+
+      </div>
+        
+
+      </div>
+
+      
+
+    </div>
+  
+    
+  </div>
+</div>
